@@ -1,5 +1,7 @@
 ## 基于ini的配置文件读取库
 
+	import "github.com/lovernote/conf"
+
 ### a. 配置文件默认路径为程序同级的conf.ini
 
 ### b. 配置文件格式如下
@@ -28,7 +30,6 @@
 	ad_server_db = "root:root@(127.0.0.1:3306)/adserver?timeout=30s&parseTime=true&loc=Local&charset=utf8mb4"
 
 ### c. 配置文件读取如下
-	import "github.com/lovernote/conf"
 
 	adServerUrl := ""
 	
