@@ -1,8 +1,8 @@
 ## 基于ini的配置文件读取库
 
-# a. 配置文件默认路径为程序同级的conf.ini
+### a. 配置文件默认路径为程序同级的conf.ini
 
-# b. 配置文件格式如下
+### b. 配置文件格式如下
 	#conf.ini#
 
 	app_name = "ads-svc"
@@ -27,7 +27,7 @@
 	[prod]
 	ad_server_db = "root:root@(127.0.0.1:3306)/adserver?timeout=30s&parseTime=true&loc=Local&charset=utf8mb4"
 
-# c. 配置文件读取如下
+### c. 配置文件读取如下
 	import "github.com/lovernote/conf"
 
 	adServerUrl := ""
@@ -40,4 +40,4 @@
 		adServerUrl = conf.GetIniData().String("dev::ad_server_db")
 	}
 
-# d. 具体支持的类型, 参见ini.go文件
+### d. 具体支持的类型, 参见ini.go文件
